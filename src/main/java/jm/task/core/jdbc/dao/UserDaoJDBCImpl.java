@@ -74,9 +74,17 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
     }
 
     public List<User> getAllUsers() {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
         String sql = "SELECT id, name, lastname, age FROM users";
 
+=======
+        String sql = "SELECT id, name, lastname, age FROM users";
+>>>>>>> parent of 5b198a8 (Corrections according to the comments mentor)
+=======
+        String sql = "SELECT id, name, lastname, age FROM users";
+>>>>>>> parent of 5b198a8 (Corrections according to the comments mentor)
         List<User> userList = new ArrayList<>();
 
         try(Connection connection = getConnect();
@@ -100,7 +108,13 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
 
     public void cleanUsersTable() {
         String sql = "DELETE FROM users";
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 5b198a8 (Corrections according to the comments mentor)
+=======
+>>>>>>> parent of 5b198a8 (Corrections according to the comments mentor)
         try(Connection connection = getConnect();
             Statement statement = connection.createStatement()){
                 statement.executeUpdate(sql);
