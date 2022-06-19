@@ -74,7 +74,9 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
     }
 
     public List<User> getAllUsers() {
-        String sql = "SELECT ID, NAME, LASTNAME, AGE FROM USERS";
+
+        String sql = "SELECT id, name, lastname, age FROM users";
+
         List<User> userList = new ArrayList<>();
 
         try(Connection connection = getConnect();
@@ -97,7 +99,8 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
     }
 
     public void cleanUsersTable() {
-        String sql = "DELETE FROM USERS";
+        String sql = "DELETE FROM users";
+
         try(Connection connection = getConnect();
             Statement statement = connection.createStatement()){
                 statement.executeUpdate(sql);
