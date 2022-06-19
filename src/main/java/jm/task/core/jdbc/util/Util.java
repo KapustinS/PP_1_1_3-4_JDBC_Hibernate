@@ -9,12 +9,9 @@ public class Util {
 
     private static Connection connection;
 
-    public static Connection getConnect() {
-        try {
-            if (connection == null) {
-                connection = DriverManager.getConnection(URL, USER_NAME, PASSWORD);
-                connection.setAutoCommit(false);
-            }
+    public static Connection getConnect(){
+        try{
+            connection= DriverManager.getConnection(URL, USER_NAME, PASSWORD);
         } catch (SQLException e) {
             e.printStackTrace();
         }
